@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bill-style.css" />
+    <title>Bill Calculator</title>
+  </head>
+  <body>
+    <div class="heading">
+      <div class="title">
+        <span> Bill Amount Calculator </span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        Bill :
+        <span> $ </span>
+        <input
+          id="some"
+          placeholder="100.00"
+          onkeyup="calculateBill()"
+          type="text"
+        />
+      </div>
+      <div class="container">
+        Tip :
+        <span> % </span>
+        <input
+          id="tip"
+          placeholder="10"
+          onkeyup="calculateBill()"
+          inputmode="numeric"
+          type="text"
+        />
+      </div>
+      <div class="last">
+        <div class="persons">
+          <span> People : </span>
+          <button onclick="increasePeople()">
+            <span> + </span>
+          </button>
+          <span id="people">1</span>
+          <button onclick="decreasePeople()">
+            <span> - </span>
+          </button>
+        </div>
+        <div class="result">
+          Bill Amount Per Person : $
+          <span id="calculated"> 0.00 </span>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bill.js"></script>
+  </body>
+</html>
